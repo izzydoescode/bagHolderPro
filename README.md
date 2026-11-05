@@ -34,7 +34,7 @@ A high-fidelity mock of a prop desk. Not just a toy. A resume project that **cou
 Want to help build this? Fork it. Star it. Or just hit me up ✌️
 
 ## 📬 Contact
-[@izzydoesit](https://linkedin.com/in/izzy-matos)
+[@izzydoescode](https://linkedin.com/in/israeldmatos)
 
 ---
 
