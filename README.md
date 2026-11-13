@@ -19,7 +19,7 @@
 - Zustand for global state
 - TypeScript
 - CI/CD via GitHub Actions
-- Live preview on Vercel/Netlify (coming soon)
+- Deployed on Vercel: [bag-holder-pro.vercel.app](https://bag-holder-pro.vercel.app)
 
 ## 🧩 Modular Architecture (Coming Soon)
 - `useMarketData()` – handles WebSocket + fallback polling
