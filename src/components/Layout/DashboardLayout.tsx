@@ -2,8 +2,6 @@ import MockStockTicker from "@/mocks/MockStockTicker";
 // import StockTicker from "../StockTicker/StockTicker";
 import AccountOverview from "@/components/Account/AccountOverview";
 import TradePanel from "@/components/TradePanel/TradePanel";
-import MockOrderBook from "../../mocks/MockOrderBook";
-import OrderBook from "../OrderBook/OrderBook";
 
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
