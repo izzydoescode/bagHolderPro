@@ -1,12 +1,14 @@
-import { ReactNode } from "react";
+import { ReactNode, Suspense, lazy } from "react";
 import MockStockTicker from "@/mocks/MockStockTicker";
 import AccountOverview from "@/components/Account/AccountOverview";
-import CandlestickChart from "@/components/Charts/CandlestickChart";
 import MockOrderBook from "@/mocks/MockOrderBook";
 import TimeAndSales from "@/components/TimeAndSales/TimeAndSales";
 import TradePanel from "@/components/TradePanel/TradePanel";
 import Watchlist from "../Watchlist/Watchlist";
 import NewsFeed from "../Newsfeed/Newsfeed";
+
+// ApexCharts is ~70% of the bundle; load it in its own chunk so the rest of the UI renders first.
+const CandlestickChart = lazy(() => import("@/components/Charts/CandlestickChart"));
 
 export default function AppLayout({ children }: { children?: ReactNode }) {
   return (
@@ -35,7 +37,9 @@ export default function AppLayout({ children }: { children?: ReactNode }) {
         <div className="flex flex-col flex-1 overflow-hidden">
           {/* Chart */}
           <div className="flex-1 overflow-hidden p-4">
-            <CandlestickChart />
+            <Suspense fallback={<div className="h-[350px] rounded bg-zinc-900 animate-pulse" />}>
+              <CandlestickChart />
+            </Suspense>
             {children}
           </div>
 

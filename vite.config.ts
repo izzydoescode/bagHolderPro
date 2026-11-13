@@ -15,4 +15,9 @@ export default defineConfig({
       '@': resolve(__dirname, 'src'),
     },
   },
+  build: {
+    // ApexCharts alone is ~580 kB and is lazy-loaded in its own chunk (see AppLayout),
+    // so the default 500 kB limit would always warn. Any other chunk over 600 kB still will.
+    chunkSizeWarningLimit: 600,
+  },
 })
