@@ -1,7 +1,7 @@
 # 💼 BagHolder Pro — Real Tick Data, Unreal Confidence
 **A brutally honest trading terminal. For those who YOLO in public, and re-learn risk the hard way.**
 
-## Preview 
+## Preview
 ![UI Preview](/src/assets/images/ui-preview.png)
 
 ## 🚀 Features
@@ -34,7 +34,7 @@ A high-fidelity mock of a prop desk. Not just a toy. A resume project that **cou
 Want to help build this? Fork it. Star it. Or just hit me up ✌️
 
 ## 📬 Contact
-[@izzydoesit](https://linkedin.com/in/izzy-matos)
+[@izzydoescode](https://linkedin.com/in/israeldmatos)
 
 ---
 
