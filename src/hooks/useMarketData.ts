@@ -19,12 +19,12 @@ export function useMarketData() {
                 ask: +(price + Math.random()).toFixed(2),
             };
             
-            const mockBids = Array.from({ length: 5 }, (_, i) => ({
+            const mockBids = Array.from({ length: 5 }, () => ({
                 price: +(price - Math.random() * 1.5).toFixed(2),
                 size: Math.floor(5 + Math.random() * 10),
             }));
             
-            const mockAsks = Array.from({ length: 5 }, (_, i) => ({
+            const mockAsks = Array.from({ length: 5 }, () => ({
                 price: +(price + Math.random() * 1.5).toFixed(2),
                 size: Math.floor(5 + Math.random() * 10),
             }));

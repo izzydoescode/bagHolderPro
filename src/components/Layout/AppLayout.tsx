@@ -8,7 +8,7 @@ import TradePanel from "@/components/TradePanel/TradePanel";
 import Watchlist from "../Watchlist/Watchlist";
 import NewsFeed from "../Newsfeed/Newsfeed";
 
-export default function AppLayout({ children }: { children: ReactNode }) {
+export default function AppLayout({ children }: { children?: ReactNode }) {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col">
       {/* Header */}

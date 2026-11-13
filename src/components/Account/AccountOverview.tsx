@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Card } from "@/components/ui/card";
-import { CardContent } from "@/components/ui/cardcontent";
+import { Card } from "@/components/ui/Card";
+import { CardContent } from "@/components/ui/CardContent";
 import { Button } from "../ui/Button";
 
 export default function OverviewModal() {

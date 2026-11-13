@@ -1,7 +1,4 @@
-import OrderRow from "./OrderRow";
-import { useState, useEffect } from "react";
-import { useMarketStore } from "@/stores/useMarketStore";
-import { MarketStoreState } from "../../types/marketData";
+import { useState } from "react";
 // import { OrderBook } from "@/types/marketData";
 import { useFinnhubSocket } from "@/hooks/useFinnhubSocket";
 import { Card } from "@/components/ui/Card";
@@ -13,22 +10,7 @@ interface Order {
   side: "bid" | "ask";
 }
 
-const mockOrderBook = {
-  // TODO: wire with live level 2 data
-  bids: [
-    { price: 100.1, size: 5 },
-    { price: 99.8, size: 8 },
-    { price: 99.5, size: 12 },
-  ],
-  asks: [
-    { price: 100.4, size: 7 },
-    { price: 100.6, size: 9 },
-    { price: 101.0, size: 10 },
-  ],
-};
-
-const maxBidSize = Math.max(...mockOrderBook.bids.map(b => b.size));
-const maxAskSize = Math.max(...mockOrderBook.asks.map(a => a.size));
+// TODO: wire with live level 2 data
 
 export default function OrderBook() {
   const [orders, setOrders] = useState<Order[]>([]);
@@ -37,7 +19,7 @@ export default function OrderBook() {
     if (data && data.length > 0) {
       const trade = data[0];
 
-      const side = Math.random() > 0.5 ? "bid" : "ask"; // Randomize side for demo
+      const side: Order["side"] = Math.random() > 0.5 ? "bid" : "ask"; // Randomize side for demo
 
       setOrders((prevOrders) => {
         const updated = [...prevOrders, { price: trade.p, size: trade.v, side }];
